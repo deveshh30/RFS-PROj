@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: gilroy;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    position: fixed;   
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2vw, 4vw;
+    padding-left: 10.5vw;
+}
+
+.nav_2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 7vw;
+}
+
+.nav_2 h4{
+    font-weight: 500;
+    font-size: 0.8vw;
+    text-transform: uppercase;
+
+} 
+
+#nav-bottom{
+    height: 0%;
+    width: 80%;
+    background-color: #111;
+    position: absolute;
+    bottom: 0%;
+    transition: all ease 0.50s;
+    border-bottom:1.4px solid #dadada ;
+    display: flex;
+    justify-content: center;
+    margin-right: 10vw;
+    align-items: flex-start;
+    padding: 0vw 1vw;
+    gap: 6.4vw;
+    cursor: pointer; 
+}
+
+nav:hover #nav-bottom{
+    height: 300%;
+    bottom: -300%;
+    background-color: #111;
+}
+
+.bottom-div-details:hover #nav-bottom{
+    height: 300%;
+    bottom: -300%;
+    background-color: #111;
+}
+
+.bottom-div-details h5 span{
+    left: 14vw;
+    font: 1vw ;
+
+    
+}
+ 
+
+.bottom-div-details h5 span:hover{ 
+    left: 14vw;
+    text-decoration: underline;
+    color: #dadada;
+    transition: 1s;
+    
+}
+
+#page-1{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-1 h1{
+    font-size: 8.5vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 7.5vw;
+}
+
+#page-1 h1 svg {
+    height: 5vw;
+    width: 5vw;
+    background-color: rgb(0, 0, 118);
+    border-radius: 50%;
+    border: white 8px solid;
+    margin-top: 15px;
+
+}
+
+#page-1-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-1-more h4{
+    font-weight: 400;
+    font-size: 1vw;
+    color: rgb(180, 180, 180);
+    text-transform: capitalize;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+#page-1-more h4:hover{
+    font-weight: 500;
+    font-size: 1.2 vw;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 3px solid rgb(61, 43, 219);
+    border-radius: 15px;
+    margin: 30px;
+    transition: 0.3s;
+}
+
+#page-2{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+}
+
+nav button {
+    background-color: rgb(0, 0, 118);
+    display: flex;
+    align-items: center;
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    border: white 2px solid;
+    font-size: 1vw;
+    font-weight: 700;
+}
+
+nav button:hover {
+    background-color: rgb(0, 0, 118);
+    display: flex;
+    align-items: center;
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    border: white 4px solid;
+    font-size: 1.03vw;
+    font-weight: 800;
+    transition: 0.65s;
+    text-decoration: underline;
+}
+
+.nav_2 {
+    display: flex;
+    gap: 2vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    margin-bottom: 2vw;
+    background-color: red;
+
+}
+
+.nav_2 h4{
+    font-size: 0.73vw;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.nav_2 h5 span{
+    font-size: 0.75vw;
+    font-weight: 400;
+    display: inline-block ;
+
+}
+
+.nav_2 h5 {
+    margin-bottom: 1vw;
+}
+
+
+#navo{
+    width: 80%;
+    height: 40%;
+    position: absolute;
+    
+}
