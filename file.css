@@ -9,8 +9,6 @@
 }
 }
 
-
-
 html, body{
     height: 100%;
     width: 100%;
@@ -24,6 +22,7 @@ nav{
     width: 100%; 
     padding: 1vw 10vw;
     background-color: #111;
+    height: 12vh;
 
 }
 
@@ -38,6 +37,11 @@ nav:hover #nav-below{
 .nav-2{
     display: flex;
     gap: 5vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+
 
 }
 
@@ -45,13 +49,27 @@ nav:hover #nav-below{
     font-size: 1.1vw;
     text-transform: uppercase;
     font-weight: 550;
+    margin-bottom: 2.6vw;
     gap: 2vw;
     
 } 
 
+
+.nav-2 h5 span {
+    font-weight: 400;
+    font-size: 1rem;
+    display: inline-block;
+    overflow: hidden;
+}
+
+
+.nav-2 .nav-ele{
+    margin-top: 12rem;
+}
+
 #nav-below{
     background-color: transparent;
-    height: 0%;
+    height: 0vh;
     position: absolute;
     width: 80%;
     bottom:  0%;
@@ -61,22 +79,33 @@ nav:hover #nav-below{
     justify-content: space-between;
     padding: 0vw 25vw;
     padding-left: 17vw;
+    display: none;
 }
 
 #nav-below .nav-ele{
     background-color: transparent;
     font-weight: 500;
-    margin-top: 1vw;
+    cursor: pointer;
 }
 
 #nav-below h5 span {
     font-size: 0.7vw;
     font-weight: 500;
     display: inline-block;
+    cursor: pointer;
 }
 
+.nav-2 h4 {
+    margin-bottom: 6vh;
+    padding-top: 5px;
 
 
+} 
+
+.nav-2 h5{
+    margin-bottom: 1vh;
+    cursor: pointer;
+}
 
 #nav-below h5 {
     margin-bottom: 1vw;
@@ -153,5 +182,16 @@ button{
     font-weight: 700;
     margin-right: 2vw;
 
+
+}
+
+#flow{
+    width: 80%;
+    height: 0vh;
+    z-index: 9;
+    position: absolute;
+    background-color: #111;
+    top: 100%;
+    border-bottom: 1.5px solid white;
 
 }
