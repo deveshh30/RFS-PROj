@@ -1,42 +1,37 @@
-let nav = document.querySelector("nav")
 
-nav.addEventListener("mouseenter", function(){
-   let tl = WebGLSampler.timeline()
-   
-    tl.to("#nav-below", {
-        height:"21vh"
-    })
+const nav = document.querySelector('nav');
+const flow = document.getElementById('flow');
+const itemSpans = document.querySelectorAll('.nav-2 .nav-ele h5 span');
 
-    tl.to(".nav-2 h5", {
-        display:"block"
-    })
-
-    tl.from(".nav-2 h5 span", {
-        y:25,
-        sagger:{
-            amount:0.6 
+if (nav) {
+    nav.addEventListener('mouseenter', () => {
+        if (typeof gsap === 'undefined') {
+            console.error('GSAP not loaded — animations skipped');
+            return;
         }
-        duration:0.25,
-    })
-})
 
-nav.addEventListener("mouseleave", function(){
-   let tl = WebGLSampler.timeline()
-   
-    tl.to("#nav-below", {
-        height:"0vh"
-    })
+        const tl = gsap.timeline();
 
-    tl.to(".nav-2 h5", {
-        display:"block"
-    })
+        // expand the dropdown container
+        tl.to(flow, { height: '18vh', duration: 0.45, ease: 'power2.out' })
+            // make the h5 containers visible (use autoAlpha to animate opacity + visibility)
+            .to('.nav-2 h5', { autoAlpha: 1, duration: 0.12 }, '<')
+            // animate each span item from below with a small stagger
+            .fromTo(
+                itemSpans,
+                { y: 14, autoAlpha: 0 },
+                { y: 0, autoAlpha: 1, stagger: 0.06, duration: 0.36, ease: 'power2.out' },
+                '-=0.25'
+            );
+    });
 
-    tl.to(".nav-2 h5 span", {
-        y:25,
-        sagger:{
-            amount:0.2 
-        }
-        duration:0.25,
-    })
-})
+    nav.addEventListener('mouseleave', () => {
+        if (typeof gsap === 'undefined') return;
+
+        const tl = gsap.timeline();
+        // collapse with a reverse-like sequence
+        tl.to(itemSpans, { y: 8, autoAlpha: 0, stagger: 0.04, duration: 0.18, ease: 'power1.in' })
+            .to(flow, { height: '0vh', duration: 0.36, ease: 'power2.in' }, '-=0.08');
+    });
+}
 
